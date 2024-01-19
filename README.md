@@ -1,1 +1,1 @@
-# HeltecV3
+This is a repostatory with point-point testing codes for Heltec WiFi LoRa 32 V3 devices.
