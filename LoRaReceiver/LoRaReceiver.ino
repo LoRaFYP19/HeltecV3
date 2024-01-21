@@ -97,16 +97,6 @@ void setup() {
 void sendDataToSheet(){
    if(WiFi.status()== WL_CONNECTED){
      HTTPClient http;
-// var SF = Number(e.parameter.SF);
-// var CR = Number(e.parameter.CR);
-// var txP= Number(e.parameter.txP);
-// var tolRxNum = Number(e.parameter.tolRxNum);
-// var avgRssi = Number(e.parameter.avgRssi);
-// var maxRssi = Number(e.parameter.maxRssi);
-// var minRssi = Number(e.parameter.minRssi);
-// var avgtoa = Number(e.parameter.avgtoa);
-// var minton = Number(e.parameter.minton);
-// var maxton = Number(e.parameter.maxton);
 
      String serverPath = serverName + "?SF=" + String(LORA_SPREADING_FACTOR) + "&CR=" + String(LORA_CODINGRATE) + "&txP=" + String(TX_OUTPUT_POWER) + "&tolRxNum=" + String(rxNumber) + "&avgRssi=" + String(tolRSSI/rxNumber) + "&maxRssi=" + String(maxRSSI) + "&minRssi=" + String(minRSSI) + "&avgtoa=" + String(totalTimeOnAir/rxNumber) + "&minton=" + String(minTimeOnAir) + "&maxton=" + String(maxTimeOnAir);
      Serial.println("Total RSSI: " + String(tolRSSI) + " Total Rx Number: " + String(rxNumber) + " Average RSSI: " + String(tolRSSI/rxNumber) + " Max RSSI: " + String(maxRSSI) + " Min RSSI: " + String(minRSSI) + " Total Time on Air: " + String(totalTimeOnAir) + " Min Time on Air: " + String(minTimeOnAir) + " Max Time on Air: " + String(maxTimeOnAir));
